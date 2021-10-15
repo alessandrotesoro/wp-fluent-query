@@ -1,5 +1,6 @@
 {
     "name": "sematico/wp-fluent-query",
+	"description": "A database toolkit to use Laravel Eloquent in WordPress without establishing an additional connection to the database.",
     "type": "library",
     "license": "MIT",
 	"keywords": [
