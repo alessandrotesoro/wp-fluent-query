@@ -151,8 +151,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-bin
 fluent-query.php
 wp-eloquent-encapsulator.php
 eloquent-report
 src-report
+
+bin/*
+!bin/install-wp-tests.sh
