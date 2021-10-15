@@ -1,0 +1,52 @@
+{
+    "name": "sematico/wp-fluent-query",
+    "type": "library",
+    "license": "MIT",
+	"keywords": [
+        "wordpress"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sematico\\FluentQuery\\": "src/"
+        }
+    },
+	"autoload-dev": {
+        "psr-4": {
+            "Sematico\\FluentQuery\\Tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alessandro Tesoro",
+            "email": "alessandro.tesoro@icloud.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "8.63"
+    },
+	"require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "phpunit/phpunit": "^7.0",
+        "symfony/var-dumper": "^5.1",
+        "wp-coding-standards/wpcs": "dev-master",
+		"phpcompatibility/php-compatibility": "^9.3"
+    },
+	"scripts": {
+        "test": "bin/phpunit",
+		"no-dev": "composer update --prefer-dist --no-dev",
+		"eloquent-compat": "bin/phpcs -p vendor/illuminate --standard=PHPCompatibility --runtime-set testVersion 7.4 --report-full=eloquent-report",
+		"compat": "bin/phpcs -p src --standard=PHPCompatibility --runtime-set testVersion 7.4 --report-full=src-report"
+    },
+	"config": {
+        "bin-dir": "bin",
+        "sort-packages": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+		"platform":{
+            "php":"7.4"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
