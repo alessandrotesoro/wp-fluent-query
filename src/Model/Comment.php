@@ -12,6 +12,7 @@ namespace Sematico\FluentQuery\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Sematico\FluentQuery\Concerns\HasMetaFields;
 use Sematico\FluentQuery\Concerns\HasOrderScopes;
 use Sematico\FluentQuery\Concerns\HasUniqueIdentifier;
@@ -69,6 +70,13 @@ class Comment extends Model {
 	 */
 	public function replies() {
 		return $this->hasMany( self::class, 'comment_parent' );
+	}
+
+	/**
+	 * @return User
+	 */
+	public function author() {
+		return $this->hasOne( User::class, 'ID', 'user_id' )->first();
 	}
 
 	/**
