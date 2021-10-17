@@ -32,7 +32,7 @@ WP Fluent Query provides a convenient wrapper around Eloquent. It acts as a laye
 <!-- GETTING STARTED -->
 ## 📖 Usage
 
-Documentation coming soon.
+<a href="https://fluentquery.sematico.com/"><strong>Explore the documentation &rarr;</strong></a>
 
 ## 🚨 Security Issues
 If you discover a security vulnerability within Fluent Query, please email [alessandro.tesoro@icloud.com](mailto:alessandro.tesoro@icloud.com). All security vulnerabilities will be promptly addressed.
