@@ -3,7 +3,7 @@
 
 <br />
 <p align="center">
-  <a href="https://querycase.com">
+  <a href="https://fluentquery.sematico.com/">
     <img src="https://raw.githubusercontent.com/alessandrotesoro/wp-fluent-query/master/.github/assets/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
@@ -11,6 +11,9 @@
 
   <p align="center">
     The power of Laravel Eloquent in WordPress.
+	<br /><br />
+    <a href="https://fluentquery.sematico.com/"><strong>Explore the documentation &rarr;</strong></a>
+    <br />
   </p>
 </p>
 
