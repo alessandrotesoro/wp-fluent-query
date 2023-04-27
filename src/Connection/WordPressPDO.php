@@ -33,6 +33,7 @@ class WordPressPDO extends PDO {
 	/**
 	 * {@inheritdoc}
 	 */
+	#[\ReturnTypeWillChange]
 	public function beginTransaction() {
 		if ( $this->in_transaction ) {
 			throw new PDOException( 'Failed to start transaction. Transaction is already started.' );
@@ -44,6 +45,7 @@ class WordPressPDO extends PDO {
 	/**
 	 * {@inheritdoc}
 	 */
+	#[\ReturnTypeWillChange]
 	public function commit() {
 		if ( ! $this->in_transaction ) {
 			throw new PDOException( 'There is no active transaction to commit.' );
@@ -55,6 +57,7 @@ class WordPressPDO extends PDO {
 	/**
 	 * {@inheritdoc}
 	 */
+	#[\ReturnTypeWillChange]
 	public function rollBack() {
 		if ( ! $this->in_transaction ) {
 			throw new PDOException( 'There is no active transaction to rollback.' );
@@ -66,6 +69,7 @@ class WordPressPDO extends PDO {
 	/**
 	 * {@inheritdoc}
 	 */
+	#[\ReturnTypeWillChange]
 	public function inTransaction() {
 		return $this->in_transaction;
 	}
@@ -73,6 +77,7 @@ class WordPressPDO extends PDO {
 	/**
 	 * {@inheritdoc}
 	 */
+	#[\ReturnTypeWillChange]
 	public function exec( $statement ) {
 		return $this->wpConnection->unprepared( $statement );
 	}
@@ -80,6 +85,7 @@ class WordPressPDO extends PDO {
 	/**
 	 * {@inheritdoc}
 	 */
+	#[\ReturnTypeWillChange]
 	public function lastInsertId( $name = null ) {
 		return $this->wpConnection->getWpdb()->insert_id;
 	}
@@ -87,6 +93,7 @@ class WordPressPDO extends PDO {
 	/**
 	 * {@inheritdoc}
 	 */
+	#[\ReturnTypeWillChange]
 	public function errorCode() {
 		return null;
 	}
@@ -94,6 +101,7 @@ class WordPressPDO extends PDO {
 	/**
 	 * {@inheritdoc}
 	 */
+	#[\ReturnTypeWillChange]
 	public function errorInfo() {
 		return [
 			$this->wpConnection->getWpdb()->last_error,
